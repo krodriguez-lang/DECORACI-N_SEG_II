@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normas de Seguridad - Decoración Escolar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.1) 10px,
+                rgba(255,255,255,0.1) 20px
+            );
+            animation: move 20s linear infinite;
+        }
+
+        @keyframes move {
+            0% { transform: translateX(-50px) translateY(-50px); }
+            100% { transform: translateX(50px) translateY(50px); }
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            position: relative;
+            z-index: 2;
+            opacity: 0.95;
+        }
+
+        .warning-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .content {
+            padding: 0;
+        }
+
+        .section-3 {
+            background: linear-gradient(135deg, #fff5f5, #fed7d7);
+            border-left: 8px solid #e53e3e;
+            padding: 30px;
+            margin-bottom: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-4 {
+            background: linear-gradient(135deg, #fefcbf, #fed7aa);
+            border-left: 8px solid #d69e2e;
+            padding: 30px;
+            margin-bottom: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2d3748;
+        }
+
+        .icon {
+            font-size: 2em;
+        }
+
+        .surfaces-box {
+            margin-top: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            border: 2px solid #fde2d5;
+        }
+
+        .surfaces-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+
+        .surfaces-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .surface-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: #fef5e7;
+            border-radius: 8px;
+            border: 1px solid #fde2d5;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #2d3748, #1a202c);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            margin-bottom: 10px;
+            color: #81e6d9;
+        }
+
+        /* Estilo para los recuadros blancos */
+        .recuadro-blanco {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .recuadro-blanco .title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+
+        .recuadro-blanco .item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px 0;
+        }
+
+        .recuadro-blanco .item .icon {
+            font-size: 2.5em;
+            color: #38a169;
+        }
+
+        .recuadro-blanco .item .text {
+            font-size: 1.2em;
+            color: #2d3748;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="warning-icon">⚠️</div>
+            <h1>NORMAS DE SEGURIDAD</h1>
+            <p>Decoración Segura en Instalaciones Educativas</p>
+        </div>
+
+        <div class="content">
+            <!-- SECCIÓN 3: Consecuencias Económicas -->
+            <div class="section-3">
+                <div class="recuadro-blanco">
+                    <div class="title">💰 CONSECUENCIAS ECONÓMICAS</div>
+                    <div class="item">
+                        <span class="icon">💸</span>
+                        <div class="text">
+                            <strong>Aumento de Costos</strong><br>
+                            Incrementa significativamente los gastos de mantenimiento
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="icon">📅</span>
+                        <div class="text">
+                            <strong>Afecta Cronogramas</strong><br>
+                            Altera tiempos y presupuestos establecidos
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 4: Consecuencias de Mantenimiento -->
+            <div class="section-4">
+                <div class="recuadro-blanco">
+                    <div class="title">🛠 CONSECUENCIAS DE MANTENIMIENTO</div>
+                    <div class="item">
+                        <span class="icon">🧹</span>
+                        <div class="text">
+                            <strong>Residuos Difíciles</strong><br>
+                            La cinta adhesiva deja residuos pegajosos difíciles de remover
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="icon">🏚️</span>
+                        <div class="text">
+                            <strong>Deterioro de Acabados</strong><br>
+                            Daña pintura, superficies y acabados arquitectónicos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>🤝 Trabajemos Juntos por un Ambiente Seguro</h3>
+            <p>Tu colaboración es fundamental para mantener la seguridad de nuestra comunidad educativa</p>
+        </div>
+    </div>
+</body>
+</html>
